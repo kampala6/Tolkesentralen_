@@ -1,5 +1,6 @@
-public class Kunde{
-     public string fornavn{get;set}
-     public string etternavn{get:set}
+public class kunde{
 
+     public class fornavn{get;set}
+     public class etternavn{get; set}
+      
 }
