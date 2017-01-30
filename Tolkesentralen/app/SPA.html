@@ -1,0 +1,35 @@
+﻿<div class="col-sm-3 col-sm-offset-0" *ngIf="divBook">
+    <p name="tester" ></p>
+    
+    <div style="width:250px" class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Check in</h3>
+        </div>
+
+        <div class="panel-body">
+            <form [formGroup]="skjemaS2">
+                <div class="form-group">
+                    <label>Guest</label>
+                    <input (click)="ShowGuests()"  class="form-control" formControlName="personnr"   />
+                    <p class="alert alert-warning" [hidden]="skjemaS2.controls.personnr.valid || !skjemaS2.controls.personnr.touched">
+                        Person er obligatorisk (11 siffer)
+                    </p>
+                </div>
+                
+                <div class="form-group">
+                    <label>Date</label>
+                    <div>
+                        <input (click)="ShowCalendar()" id="inputFrom" [(ngModel)]="fromDateString" placeholder="From" style="width: 49%; display: inline-block" required class="form-control" formControlName="tlf" />
+                        <input (click)="ShowCalendar()" id="inputTo" [(ngModel)]="toDateString" placeholder="To" style="width: 49%; display: inline-block" required class="form-control" formControlName="test" />
+                    </div>
+                </div>
+                
+            </form>
+            <button style="float: right;" class="btn btn-default" (click)="test()" >Save</button>
+        </div>
+    </div>
+  
+    
+</div>
+
+
