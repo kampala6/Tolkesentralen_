@@ -32,6 +32,7 @@ var SPA = (function () {
     }
     SPA.prototype.ngOnInit = function () {
         this.divBook = true;
+        this.navbar = true;
     };
     SPA = __decorate([
         core_1.Component({
