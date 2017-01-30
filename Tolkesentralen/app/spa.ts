@@ -19,6 +19,7 @@ export class SPA {
      // Single Page Application
     
     divBook: boolean;
+    navbar: boolean;
     skjemaS2: FormGroup; 
     skjemaS3: FormGroup; 
     
@@ -42,6 +43,7 @@ export class SPA {
 
     ngOnInit() {
         this.divBook = true;
+        this.navbar = true;
     }
 
     
